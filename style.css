@@ -177,11 +177,8 @@ body {
 	transition: .5s ease;
 	margin-top: 65px;
 }
-.content:hover {
-	pointer-events: none;
-}
 .content-body {
-	width: 60%;
+	width: 55%;
 	position: relative;
 	margin: 0 auto 100px auto;
 	line-height: 25px
