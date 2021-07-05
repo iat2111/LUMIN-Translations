@@ -1,0 +1,232 @@
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+    font-family: 'Perpetua',"Times New Roman", serif;
+    font-weight: medium;
+}
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0;
+}
+.nav{
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #191970;
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #191970;
+    font-size: 1.6rem;
+}
+
+.home {
+	font-size: 1rem;
+	margin-left: 1rem;
+	float: left;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: 1rem;
+    margin-left: auto;
+    float: right;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #F6F6F6;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+/*background style after scroll*/
+.scrolling-active{
+    background-color: #F6F6F6;
+    box-shadow: 0 1px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 3.5rem;
+}
+
+.scrolling-active .nav a{
+    color: #191970;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #191970;
+    color: #F6F6F6;
+}
+
+.scrolling-active #nav-cta:hover{
+    background-color: #F6F6F6;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #191970;
+}
+/*background style after scroll end*/
+
+body {
+	position: relative;
+	width: 100%;
+	overflow: auto;
+	height: auto;
+	background: #F6F6F6;
+	font-family: 'Perpetua', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*overlay style begin*/
+.overlay {
+	background-color: #191970;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 600;
+    opacity: 0.9;
+    transition: all 1s ease-out;
+    display: block;
+ }
+
+.overlay-center {
+	overflow: auto;
+	text-align: center;
+	font-size: 24px;
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	line-height: 20px
+}
+
+.overlay-center h1 {
+	color: #191970;
+	text-shadow: -2px 0 #F6F6F6, 0 2px #F6F6F6, 2px 0 #F6F6F6, 0 -2px #F6F6F6;
+}
+.overlay-center p {
+	color: #F6F6F6;
+}
+.overlay-bottom {
+	color: #F6F6F6;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	padding-right: 10px;
+	margin-top: auto;
+}
+.overlay:hover {
+	opacity: 0;
+    transition: .5 ease-in;
+}
+
+
+/*overlay style end*/
+
+/*essay style begin*/
+.content {
+	box-sizing: border-box;
+	box-orient: vertical;
+	display: box;
+	display: flex;
+	flex-direction: column
+	min-height: 100vh;
+	width: 100%;
+	flex: 1;
+	margin: 0 auto;
+	padding: 30px;
+	font-size: 18px;
+	line-height: 25px;
+	transition: .5s ease;
+	margin-top: 65px;
+}
+.content:hover {
+	pointer-events: none;
+}
+.content-body {
+	width: 60%;
+	position: relative;
+	margin: 0 auto 100px auto;
+	line-height: 25px
+}
+
+.content-bio {
+	font-size: 14px;
+	font-weight: bold;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    vertical-align: baseline;
+	text-align: center;
+	color: #191970;
+	margin-top: 50px;
+}
+
+section {
+	display: block;
+}
+
+
+.footnotes {
+    margin-top: 30px;
+    line-height: 16px;
+}
+
+.footnotes ol {
+    list-style-type: decimal;
+    display: inline;
+    font-size: 12px;
+    vertical-align: top;
+    margin: 0;
+    padding: 0;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+
+a:hover {
+	cursor: pointer;
+}
+
+
+
